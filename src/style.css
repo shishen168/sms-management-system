@@ -1,0 +1,65 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 优化滚动性能 */
+* {
+  scroll-behavior: smooth;
+}
+
+/* 优化动画性能 */
+.el-menu-item,
+.el-button,
+.el-input,
+.el-select {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+/* 优化表格性能 */
+.el-table__body-wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+  will-change: transform;
+}
+
+/* 优化弹窗性能 */
+.el-dialog {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* 优化加载动画性能 */
+.el-loading-spinner {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* 自定义 NProgress 样式 */
+#nprogress .bar {
+  background: #409eff !important;
+  height: 3px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #409eff, 0 0 5px #409eff !important;
+}
+</style>
